@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact - Fiercely Meghan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -27,41 +26,31 @@
     <div class="page-container">
       <section class="content">
         <h2>Contact Meghan</h2>
-        <p>Interested in booking Meghan or have a question? Fill out the form below and she’ll be in touch.</p>
-
         <form action="https://formspree.io/f/manjqree" method="POST">
-          <!-- Honeypot field (spam protection) -->
-          <input type="text" name="website" style="display:none">
+          <input type="hidden" name="_redirect" value="https://fiercelymeghan.github.io/fiercelymeghanwebsite/thankyou.html" />
+          <input type="text" name="_gotcha" style="display:none" />
 
           <div class="form-row">
-            <label for="name">Your Name *</label>
-            <input type="text" id="name" name="name" required>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required />
           </div>
 
           <div class="form-row">
-            <label for="email">Your Email *</label>
-            <input type="email" id="email" name="_replyto" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
           </div>
 
           <div class="form-row">
-            <label for="phone">Phone Number (optional)</label>
-            <input type="tel" id="phone" name="phone">
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone" />
           </div>
 
           <div class="form-row">
-            <label for="organization">Organization (optional)</label>
-            <input type="text" id="organization" name="organization">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
           </div>
 
-          <div class="form-row">
-            <label for="message">Message *</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-          </div>
-
-          <div class="form-row">
-            <button type="submit" class="btn-primary">Send Message</button>
-          </div>
-          <input type="hidden" name="_redirect" value="https://fiercelymeghan.github.io/fiercelymeghanwebsite/thankyou.html">
+          <button type="submit" class="btn-primary">Send Message</button>
         </form>
       </section>
     </div>
